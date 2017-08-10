@@ -36,6 +36,8 @@ rm -rf /usr/local/tomcat8/webapps/ROOT
 
 COPY docker-entrypoint.sh /usr/local/bin/
 
+ENV PATH=/usr/local/bin:${PATH}
+
 ENTRYPOINT ["docker-entrypoint.sh"]
 
 CMD ["/bin/bash"]
