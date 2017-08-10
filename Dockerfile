@@ -17,13 +17,13 @@ RUN yum install -y java-1.8.0-openjdk java-1.8.0-openjdk-devel.x86_64 && \
 COPY conf/redis/redis /etc/init.d/redis
 COPY conf/redis/redis.conf /etc/redis.conf
 RUN chmod +x /etc/init.d/redis && cd /usr/src && \
- wget http://download.redis.io/releases/redis-3.2.9.tar.gz && tar xzf redis-3.2.9.tar.gz && cd redis-3.2.9 && make && \
+ wget http://download.redis.io/releases/redis-3.2.10.tar.gz && tar xzf redis-3.2.10.tar.gz && cd redis-3.2.10 && make && \
  cp src/redis-server /usr/sbin/redis-server && cp src/redis-cli /usr/sbin/redis-cli && \
- rm -rf /usr/src/redis-3.2.9.tar.gz
+ rm -rf /usr/src/redis-3.2.10.tar.gz
 
 #tomcat
 RUN wget http://mirror.bit.edu.cn/apache/tomcat/tomcat-8/v8.5.20/bin/apache-tomcat-8.5.20.tar.gz && tar xzf apache-tomcat-8.5.20.tar.gz && \
-mv ./apache-tomcat-8.5.16 /usr/local/tomcat8 && \
+mv ./apache-tomcat-8.5.20 /usr/local/tomcat8 && \
 sed -i "s/port=\"8080\"/port=\"80\"/g" /usr/local/tomcat8/conf/server.xml && \
 rm -rf apache-tomcat-8.5.20.tar.gz
 
