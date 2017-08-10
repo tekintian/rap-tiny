@@ -25,8 +25,10 @@ https://bitbucket.org/tekintian/rap/raw/0c6da1f0316d8d02baf9decf37e8ab381933f5fb
 
 ## 如何使用
 
-1. 首先创建容器：`docker run -itd -p 8080:8080 --name rap-tiny tekintian/rap-tiny`
+1. 首先创建容器：`docker run -itd -p 8080:80 --name rap-tiny tekintian/rap-tiny`
 
+    8080 为主机端口,如果8080被占用,则更换一个端口
+    
    > 如果需要修改rap的mysql配置，修改配置文件
    /usr/local/tomcat8/webapps/ROOT/WEB-INF/classes/config.properties中的配置即可
 
