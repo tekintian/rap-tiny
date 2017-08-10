@@ -16,12 +16,16 @@ rap docker without mysql container
 
 tomcat安装位置为`/usr/local/tomcat8`
 
+rap_tiny
+rap_tiny
+RapYN888888
 
 在安装之后需要自己导入创建数据库
 https://bitbucket.org/tekintian/rap/raw/0c6da1f0316d8d02baf9decf37e8ab381933f5fb/ROOT/WEB-INF/classes/database/initialize.sql
 
 登录容器并配置容器中的数据库连接/usr/local/tomcat8/webapps/ROOT/WEB-INF/classes/config.properties
 
+docker run --name rap-tiny -itd -p 808:80 -v /rap-tiny:/data tekintian/rap:tiny
 
 ## 如何使用
 
