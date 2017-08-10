@@ -8,8 +8,8 @@
 
 并且默认开机启动
 
-默认root密码为`Root1.pwd`。  
-默认mysql密码为`Root1.pwd`。  
+默认root密码为`RAP.YUNNAN.WS`。  
+默认mysql密码为`RAP.YUNNAN.WS`。  
 
 
 # 官方地址

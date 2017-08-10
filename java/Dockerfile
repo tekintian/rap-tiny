@@ -7,11 +7,11 @@
 FROM centos:6.8
 
 # File Author / Maintainer
-MAINTAINER lvyalin lvyalin.yl@gmail.com
+MAINTAINER TEKIN tekintian@gmail.com
 
 ##################### 常用基础软件 START #####################
 RUN yum install -y vsftpd vim wget crontabs gcc make openssh-server git unzip && \
- service sshd start && echo "root:Root1.pwd" | chpasswd &&  yum clean all
+ service sshd start && echo "root:RAP.YUNNAN.WS" | chpasswd &&  yum clean all
 ##################### 常用基础软件 END #####################
 
 ##################### 安装java-1.8.0-openjdk-headless #########
@@ -33,7 +33,7 @@ RUN rpm -Uvh https://dev.mysql.com/get/mysql57-community-release-el6-9.noarch.rp
  yum -y install mysql-community-server && \
  service mysqld start && \
  defaultmysqlpwd=`grep 'A temporary password' /var/log/mysqld.log | awk -F"root@localhost: " '{ print $2}' ` && \
- /usr/bin/mysql -uroot -p${defaultmysqlpwd} --connect-expired-password -e "SET PASSWORD = PASSWORD('Root1.pwd');grant all privileges on *.* to root@'%' identified by 'Root1.pwd';" && \
+ /usr/bin/mysql -uroot -p${defaultmysqlpwd} --connect-expired-password -e "SET PASSWORD = PASSWORD('RAP.YUNNAN.WS');grant all privileges on *.* to root@'%' identified by 'RAP.YUNNAN.WS';" && \
  yum clean all
 ###################### mysql END #####################
 
